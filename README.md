@@ -9,5 +9,11 @@
     <a href="https://hacklover.net/discord"><img src="https://img.shields.io/badge/chat-on%20discord-7289da.svg" alt="Join us on Discord" /></a>
 </p>
 
-## Information
+## Overview
 This module comes pre-installed in any Open Web Desktop client.
+
+## Features
+- It does nothing because it's a demo module
+
+## License
+This project is released under the [MIT License](LICENSE).
