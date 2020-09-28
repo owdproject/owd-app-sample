@@ -16,4 +16,4 @@ This module comes pre-installed in any Open Web Desktop client.
 - It does nothing because it's a demo module
 
 ## License
-This project is released under the [MIT License](LICENSE).
+This project is released under the [MIT License](LICENSE)
