@@ -8,8 +8,8 @@
 
 <script>
   import Window from "@owd-client/core/src/components/window/Window";
+
   export default {
-    name: "WindowExample",
     components: {Window},
     props: {
       data: Object
