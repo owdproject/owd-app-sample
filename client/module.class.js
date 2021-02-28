@@ -5,11 +5,45 @@ export default class SampleModule extends Module {
     super(context)
   }
 
-  loadStore() {}
+  loadAssets() {
+    // import additional assets
+  }
 
-  loadStoreInstance() {}
+  loadStore() {
+    return {
+      state: {},
+      getters: {},
+      mutations: {},
+      actions: {}
+    }
+  }
 
-  loadCommands() {}
+  loadStoreInstance({store, terminal}) {
+    return {
+      state: {},
+      getters: {},
+      mutations: {},
+      actions: {}
+    }
+  }
 
-  loadSseEvent() {}
+  loadCommands({store, terminal}) {
+    return {
+      'sample': function () {
+        store.dispatch('core/windows/windowCreate', {
+          name: 'WindowSample'
+        });
+      }
+    }
+  }
+
+  loadSseEvent({store}) {
+    return {
+      'open-sample': function () {
+        store.dispatch('core/windows/windowCreate', {
+          name: 'WindowSample'
+        });
+      }
+    }
+  }
 }
