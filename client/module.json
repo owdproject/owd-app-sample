@@ -1,6 +1,6 @@
 {
   "name": "sample",
-  "version": "1.4.3",
+  "version": "2.0.0",
   "license": "MIT",
   "homepage": "https://github.com/hacklover/owd-sample",
   "author": {
@@ -15,13 +15,15 @@
       "title": "OWD Sample Module",
       "titleShort": "Sample",
       "icon": "mdi-application",
-      "window": {
-        "menu": true,
-        "closed": true,
-        "hidden": false,
-        "resizable": false,
+      "menu": true,
+      "closed": true,
+      "hidden": false,
+      "resizable": false,
+      "size": {
         "width": 448,
-        "height": 240,
+        "height": 240
+      },
+      "position": {
         "x": 0,
         "y": 0,
         "z": 0

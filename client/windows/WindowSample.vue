@@ -1,5 +1,5 @@
 <template>
-  <Window :title="data.title" :window="data">
+  <Window :window="window">
     <p>
       Hello world! I'm an empty window.
     </p>
@@ -12,13 +12,14 @@
   export default {
     components: {Window},
     props: {
-      data: Object
+      window: Object
     }
   }
 </script>
 
 <style scoped lang="scss">
   p {
+    margin: 0;
     color: #AAA;
   }
 </style>

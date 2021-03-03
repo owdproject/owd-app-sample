@@ -1,6 +1,6 @@
-import {Module} from '@owd-client/core';
+import {ModuleApp} from '@owd-client/core';
 
-export default class SampleModule extends Module {
+export default class SampleModule extends ModuleApp {
   constructor(context) {
     super(context)
   }
