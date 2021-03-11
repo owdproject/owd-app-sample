@@ -15,7 +15,6 @@
       "titleShort": "Sample",
       "icon": "mdi-application",
       "menu": true,
-      "closed": true,
       "hidden": false,
       "resizable": false,
       "size": {
