@@ -13,7 +13,13 @@
       "name": "WindowSample",
       "title": "OWD Sample Module",
       "titleShort": "Sample",
-      "icon": "mdi-application",
+      "icon": {
+        "name": "mdi-application",
+        "size": "25px",
+        "offset": {
+          "y": -2
+        }
+      },
       "menu": true,
       "hidden": false,
       "resizable": false,
