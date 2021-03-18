@@ -21,7 +21,6 @@
         }
       },
       "menu": true,
-      "hidden": false,
       "resizable": false,
       "size": {
         "width": 448,
