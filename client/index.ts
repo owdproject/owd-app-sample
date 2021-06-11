@@ -19,7 +19,7 @@ export default class SampleModule extends ModuleApp {
             name: "mdi-application",
             size: "25px",
             offset: {
-              y: -2
+              y: -1
             }
           },
           menu: true,
