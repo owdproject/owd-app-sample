@@ -1,20 +1,13 @@
 <template>
-  <Window :window="window">
+  <Window>
     <p>
       Hello world! I'm an empty window.
     </p>
   </Window>
 </template>
 
-<script>
-  import Window from "@owd-client/core/src/components/window/Window";
-
-  export default {
-    components: {Window},
-    props: {
-      window: Object
-    }
-  }
+<script setup>
+  import Window from "@owd-client/core/src/components/window/app/WindowApp.vue";
 </script>
 
 <style scoped lang="scss">
