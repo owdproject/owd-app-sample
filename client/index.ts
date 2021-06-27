@@ -5,7 +5,7 @@ import {OwdModuleAppLoadSseEventsContext, OwdModuleAppLoadCommandsContext, OwdMo
 import WindowSample from "./windows/WindowSample.vue";
 
 export default class SampleModule extends ModuleApp {
-  loadModule() {
+  setup() {
     return {
       name: "sample",
       singleton: true,
@@ -38,11 +38,11 @@ export default class SampleModule extends ModuleApp {
     }
   }
 
-  loadAssets() {
+  setupAssets() {
     // import additional assets
   }
 
-  loadStore() {
+  setupStore() {
     // define store structure for your module
     return {
       state: {},
@@ -52,7 +52,7 @@ export default class SampleModule extends ModuleApp {
     }
   }
 
-  loadStoreInstance({store, terminal}: OwdModuleAppLoadStoreContext) {
+  setupStoreInstance({store, terminal}: OwdModuleAppLoadStoreContext) {
     // define store structure for your window instance
     return {
       state: {},
@@ -62,7 +62,7 @@ export default class SampleModule extends ModuleApp {
     }
   }
 
-  loadCommands({store, terminal}: OwdModuleAppLoadCommandsContext) {
+  setupCommands({store, terminal}: OwdModuleAppLoadCommandsContext) {
     // define terminal command callbacks
     return {
       'sample': function () {
@@ -73,7 +73,7 @@ export default class SampleModule extends ModuleApp {
     }
   }
 
-  loadSseEvent({store}: OwdModuleAppLoadSseEventsContext) {
+  setupSseEvent({store}: OwdModuleAppLoadSseEventsContext) {
     // define SSE event callbacks
     return {
       'open-sample': function () {
