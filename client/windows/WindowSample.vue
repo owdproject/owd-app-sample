@@ -1,13 +1,13 @@
 <template>
-  <Window>
+  <WindowApp>
     <p>
       Hello world! I'm an empty window.
     </p>
-  </Window>
+  </WindowApp>
 </template>
 
 <script setup>
-  import Window from "@owd-client/core/src/components/window/app/WindowApp.vue";
+// do magic
 </script>
 
 <style scoped lang="scss">
