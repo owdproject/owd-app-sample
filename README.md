@@ -14,10 +14,36 @@
 </p>
 
 ## Overview
-This module comes pre-installed in any Open Web Desktop client.
+An app boilerplate for your Open Web Desktop client
 
-## Features
-- It does nothing because it's a demo module
+## Quick install
+- Move to your client folder, then
+  ```
+  # Enter modules app directory
+  cd src/modules/app/
+  
+  # Clone this repository
+  git clone https://github.com/hacklover/owd-app-sample sample
+  ```
+- Define this module in `owd-client/client.extensions.ts`
+  ```js
+  import AboutModule from "@owd-client/core/src/modules/app/about";
+  import DebugModule from "@owd-client/core/src/modules/app/debug";
+  import SampleModule from "~/modules/app/sample/client";
+
+  export default {
+    app: {
+      modules: [
+        AboutModule,
+        DebugModule,
+        SampleModule,
+      ]
+    },
+    ...
+  ```
+
+## Compatibility
+- Open Web Desktop client v2.0.0-beta.1
 
 ## License
 This project is released under the [MIT License](LICENSE)
