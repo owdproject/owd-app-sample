@@ -43,6 +43,7 @@ export default class SampleModule extends ModuleApp {
   }
 
   loadStore() {
+    // define store structure for your module
     return {
       state: {},
       getters: {},
@@ -52,6 +53,7 @@ export default class SampleModule extends ModuleApp {
   }
 
   loadStoreInstance({store, terminal}: OwdModuleAppLoadStoreContext) {
+    // define store structure for your window instance
     return {
       state: {},
       getters: {},
@@ -61,6 +63,7 @@ export default class SampleModule extends ModuleApp {
   }
 
   loadCommands({store, terminal}: OwdModuleAppLoadCommandsContext) {
+    // define terminal command callbacks
     return {
       'sample': function () {
         store.dispatch('core/windows/windowCreate', {
@@ -71,6 +74,7 @@ export default class SampleModule extends ModuleApp {
   }
 
   loadSseEvent({store}: OwdModuleAppLoadSseEventsContext) {
+    // define SSE event callbacks
     return {
       'open-sample': function () {
         store.dispatch('core/windows/windowCreate', {
