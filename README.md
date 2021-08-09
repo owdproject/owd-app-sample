@@ -1,5 +1,5 @@
-# Sample module for OWD Client
-> Just a "hello world" module for Open Web Desktop
+# Chat module for OWD Client
+> A basic chat module for Open Web Desktop
 
 <p>
     <img src="media/demo.png" alt="OWD Sample module demo" />
@@ -23,20 +23,20 @@ An app boilerplate for your Open Web Desktop client
   cd src/modules/app/
   
   # Clone this repository
-  git clone https://github.com/hacklover/owd-app-sample sample
+  git clone https://github.com/hacklover/owd-app-chat chat
   ```
 - Define this module in `owd-client/client.extensions.ts`
   ```js
   import AboutModule from "@owd-client/core/src/modules/app/about";
-  import DebugModule from "@owd-client/core/src/modules/app/debug";
-  import SampleModule from "~/modules/app/sample/client";
+  //import DebugModule from "@owd-client/core/src/modules/app/debug";
+  import ChatModule from "~/modules/app/chat/client";
 
   export default {
     app: {
       modules: [
         AboutModule,
-        DebugModule,
-        SampleModule,
+        //DebugModule,
+        ChatModule,
       ]
     },
     ...

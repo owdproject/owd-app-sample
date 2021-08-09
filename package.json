@@ -1,10 +1,10 @@
 {
-  "name": "owd-app-sample",
-  "version": "2.0.0-beta",
+  "name": "owd-app-chat",
+  "version": "1.0.0-alpha",
   "license": "MIT",
-  "homepage": "https://github.com/hacklover/owd-app-sample",
+  "homepage": "https://github.com/bipolarmorgan/owd-app-chat",
   "author": {
-    "name": "hacklover",
-    "url": "https://github.com/hacklover"
+    "name": "bipolarmorgan",
+    "url": "https://github.com/bipolarmorgan"
   }
 }

@@ -2,28 +2,28 @@ import {ModuleApp} from "@owd-client/core/index";
 import {OwdModuleAppSetupSseEventsContext, OwdModuleAppSetupCommandsContext, OwdModuleAppSetupStoreContext} from "@owd-client/types";
 
 // window components
-import WindowSample from "./windows/WindowSample.vue";
+import WindowChat from "./windows/WindowChat.vue";
 
-export default class SampleModule extends ModuleApp {
+export default class ChatModule extends ModuleApp {
   setup() {
     return {
-      name: "sample",
+      name: "chat",
       singleton: true,
       windows: [
         {
-          component: WindowSample,
-          name: "WindowSample",
-          title: "OWD Sample Module",
-          titleMenu: "Sample",
+          component: WindowChat,
+          name: "WindowChat",
+          title: "OWD Chat Module",
+          titleMenu: "Chat",
           icon: {
-            name: "mdi-application",
+            name: "mdi-chat",
             size: "25px",
             offset: {
               y: -1
             }
           },
           menu: true,
-          resizable: false,
+          resizable: true,
           size: {
             width: 448,
             height: 240
@@ -65,9 +65,9 @@ export default class SampleModule extends ModuleApp {
   setupCommands({store, terminal}: OwdModuleAppSetupCommandsContext) {
     // define terminal command callbacks
     return {
-      'sample': function () {
+      'chat': function () {
         store.dispatch('core/windows/windowCreate', {
-          name: 'WindowSample'
+          name: 'WindowChat'
         });
       }
     }
@@ -76,9 +76,9 @@ export default class SampleModule extends ModuleApp {
   setupSseEvent({store}: OwdModuleAppSetupSseEventsContext) {
     // define SSE event callbacks
     return {
-      'open-sample': function () {
+      'open-chat': function () {
         store.dispatch('core/windows/windowCreate', {
-          name: 'WindowSample'
+          name: 'WindowChat'
         });
       }
     }

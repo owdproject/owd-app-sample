@@ -1,7 +1,7 @@
 <template>
   <WindowApp>
     <p>
-      Hello world! I'm an empty window.
+      <iframe class="auth-visible" src="https://minnit.chat/Demo" style="border:none;width:100%;height:500px;" allowTransparency="true"></iframe>
     </p>
   </WindowApp>
 </template>
