@@ -13,7 +13,7 @@ export default class SampleModule extends ModuleApp {
         {
           component: WindowSample,
           name: "WindowSample",
-          title: "OWD Sample Module",
+          title: "Sample module",
           titleMenu: "Sample",
           icon: {
             name: "mdi-application",
@@ -22,8 +22,6 @@ export default class SampleModule extends ModuleApp {
               y: -1
             }
           },
-          menu: true,
-          resizable: false,
           size: {
             width: 448,
             height: 240
