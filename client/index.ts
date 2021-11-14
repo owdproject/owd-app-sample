@@ -1,4 +1,4 @@
-import {ModuleApp} from "@owd-client/core/index";
+import {ModuleApp, useDesktopApps} from "@owd-client/core/index";
 import {OwdModuleAppSetupSseEventsContext, OwdModuleAppSetupCommandsContext, OwdModuleAppSetupStoreContext} from "@owd-client/types";
 
 // window components
@@ -61,23 +61,33 @@ export default class SampleModule extends ModuleApp {
   }
 
   setupCommands({store, terminal}: OwdModuleAppSetupCommandsContext) {
-    // define terminal command callbacks
     return {
       'sample': function () {
-        store.dispatch('core/windows/windowCreate', {
-          name: 'WindowSample'
-        });
+        const desktopApps = useDesktopApps()
+        const projectsModuleApp = desktopApps.findApp('sample')
+
+        if (projectsModuleApp) {
+          projectsModuleApp
+            .createWindow('WindowSample')
+            .onMounted(windowInstance => windowInstance.open(true))
+
+          terminal.writeln("Window opened");
+        }
       }
     }
   }
 
   setupSseEvent({store}: OwdModuleAppSetupSseEventsContext) {
-    // define SSE event callbacks
     return {
       'open-sample': function () {
-        store.dispatch('core/windows/windowCreate', {
-          name: 'WindowSample'
-        });
+        const desktopApps = useDesktopApps()
+        const projectsModuleApp = desktopApps.findApp('sample')
+
+        if (projectsModuleApp) {
+          projectsModuleApp
+            .createWindow('WindowSample')
+            .onMounted(windowInstance => windowInstance.open(true))
+        }
       }
     }
   }
