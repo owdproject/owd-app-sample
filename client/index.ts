@@ -16,7 +16,7 @@ export default class SampleModule extends ModuleApp {
           title: "Sample module",
           titleMenu: "Sample",
           icon: {
-            name: "mdi-application",
+            name: "mdi mdi-application",
             size: "25px",
             offset: {
               y: -1
